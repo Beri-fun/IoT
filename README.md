@@ -28,12 +28,14 @@ Filtering data and calculating mean value are working only when data is begin se
 
 ### How to filter data
 1. On the http://localhost:8088/ type sensor's name from which you would like to filter data in the proper place and the names of columns. Example is shown below.
+
 ![](https://i.imgur.com/WJ1lJ7s.png)
 
 
 ### How to get an average of data
 1. On the http://localhost:8088/ type sensor's name from which you would like to get an average in the proper place and time intervals. Example is shown below. After each 3 second the program takes data which he got from broker, counts the average and sends it to server. After next 3 second he counts the average from data which he got during this previous 3 second. 
- ![](https://i.imgur.com/rzkuK7W.png)
+
+![](https://i.imgur.com/rzkuK7W.png)
 
 ### How to draw a graph
 1. Activate filtering or calculating mean
