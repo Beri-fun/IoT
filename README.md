@@ -16,8 +16,9 @@ PS C:\path\to\this\repo> python3 server8000.py
 PS C:\path\to\this\repo> python3 filter.py 
 PS C:\path\to\this\repo> python3 aggregator.py 
 ```
-
-Go to http://localhost:8088/ in your browser and see the parameters of 'checked in' sensors
+The app *god* has an easy iterface to manage whole system of apps. Just go to http://localhost:8088/ in your browser and check it out.
+ 
+When you will be on that website you will be able to see the parameters of 'checked in' sensors.
 From this place you can change values of sensors' parameters, activate sensors to send data, filter data from sensors, get an average of data and draw a cute graph showing the received data.
 
 At the start the sensors are not sending data to mqtt broker. If you want to send data you need to activate them by typing each of their names on the website and activate them. 
