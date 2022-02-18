@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cool Server</title>
+</head>
+<body>
+  <h1>Welcome to SensorSystem!</h1>
+
+  <ul> 
+    {% for one in data %} 
+      <li> {{data[one]['name']}}
+        <ul>
+          {% for info in data[one] %} 
+            <li>{{info}}: {{data[one][info] }}</li> 
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %} 
+    </ul> 
+
+    <form action="/post" method="post">
+      <label for="names">Sensor's name:</label><br>
+      <input type="text" id="names_1" name="names"><br>
+      <label for="param">Parameter:</label><br>
+      <input type="text" id="param_1" name="param"><br>
+      <label for="warto">Value:</label><br>
+      <input type="text" id="wart_1" name="warto"><br><br>
+      <input type="submit" value="Submit">
+    </form> 
+
+    <form action="/active" method="post">
+      <br>
+      <label for="aaa">Which sensor you would like to activate:</label><br>
+      <input type="text" id="aaa_1" name="aaa"><br><br>
+      <input type="submit" value="Activate">
+    </form>
+
+
+    <form action="/super_sub" method="post">
+      <br>
+      <label for="zz">From which sensors you would like to averaging measurements:</label><br>
+      <input type="text" id="zz" name="zz"><br>
+      <label for="czas">Time gap:</label><br>
+      <input type="text" id="czas" name="czas"><br><br>
+      <input type="submit" value="Activate">
+    </form>
+
+    <form action="/filtr" method="post">
+      <br>
+      <label for="ff">From which sensors you would like to filter measurements:</label><br>
+      <input type="text" id="ff" name="ff"><br>
+      <label for="ff">Which fields:</label><br>
+      <input type="text" id="xx" name="xx"><br><br>
+      <input type="submit" value="Activate">
+    </form>
+
+  
+    <form action="/visual" method="post"><br><br>
+      <br>
+      <label for="vv">From which data you would like to draw a graph:</label><br>
+      <input type="text" id="vv" name="vv"><br><br>
+      <input type="submit" value="Activate">
+    </form>
+    
+
+    
+
+</body>
+</html>

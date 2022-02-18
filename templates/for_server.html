@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>S: 8000</title>
+</head>
+<body>
+  <h1>Welcome searchers!</h1>
+
+
+  <ul> 
+    {% for one in name %} 
+      <li> {{one}}
+        <ul>
+          {% for info in name[one] %} 
+            <li>{% for data in info %}
+                {{data }}
+                {% endfor %}
+            </li> 
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %} 
+    </ul> 
+
+
+</body>
+</html>

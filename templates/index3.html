@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+            var dataPoints = [];
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+
+                data: [{
+                    type: "line",  
+                    dataPoints: dataPoints
+                }]
+            });
+            var updateInterval = 1000;
+            var dataLength = 20;
+
+
+            var beautiful_func = function () {
+                $.getJSON("http://127.0.0.1:8000/json",
+                    function (data) {
+                        console.log(data);
+
+                        if (data != null) {
+
+                            dataPoints.push({ x: dataPoints.length, y: Number(data) });
+                            
+                        }
+
+                        chart.render();
+                    });
+
+            }
+            beautiful_func()
+            setInterval(function () { beautiful_func() }, updateInterval);
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+
+</html>
